@@ -556,8 +556,7 @@ def sync_set_led(freenect_led_options option, index=0):
     
 def sync_set_tilt_degs(int angle, index=0):
     return freenect_sync_set_tilt_degs(angle, index)
-        
-    
+       
 def sync_get_tilt_state(index=0):
     cdef freenect_raw_tilt_state* state
     res = freenect_sync_get_tilt_state(&state, index)
