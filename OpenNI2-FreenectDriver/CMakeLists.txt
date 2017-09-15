@@ -10,7 +10,7 @@ add_library(FreenectDriver SHARED ${HEADERS} ${SOURCES})
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unused-function")
 
-set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib/OpenNI2-FreenectDriver)
+set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib64/OpenNI2-FreenectDriver)
 set_target_properties(FreenectDriver PROPERTIES
   VERSION ${PROJECT_VER}
   SOVERSION ${PROJECT_APIVER}
