@@ -47,7 +47,7 @@ include (SetupDirectories)
 
 set (PROJECT_VER_MAJOR 0)
 set (PROJECT_VER_MINOR 5)
-set (PROJECT_VER_PATCH 5)
+set (PROJECT_VER_PATCH 6)
 set (PROJECT_VER
   "${PROJECT_VER_MAJOR}.${PROJECT_VER_MINOR}.${PROJECT_VER_PATCH}")
 set (PROJECT_APIVER
@@ -95,7 +95,7 @@ endif()
 ######################################################################################
 
 SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
-SET(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
+SET(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib64)
 SET(DOC_OUTPUT_PATH ${CMAKE_BINARY_DIR}/doc)
 
 if    (MSVC)
@@ -104,7 +104,7 @@ else  ()
   set(C_FLAGS_WARNING "-Wall")
 endif (MSVC)
 
-set(C_CXX_FLAGS_DEFAULT "${C_FLAGS_WARNING} -O2")
+set(C_CXX_FLAGS_DEFAULT "${C_FLAGS_WARNING} -O3 -march=native")
 
 # These defaults can be overriden by -DCMAKE_C_FLAGS=""
 set(CMAKE_C_FLAGS "${C_CXX_FLAGS_DEFAULT} ${CMAKE_C_FLAGS}")
